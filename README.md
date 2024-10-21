@@ -38,7 +38,7 @@ Overall, when you work with us:
 ![Tentative workflow](EcoEvo_societies_DEI_workflow_v1.png)
 
 ## 📅 Timeline
-![Tentative timeline](SORTEE2024 project timeline.png)
+![Tentative timeline](SORTEE2024_project_timeline.png)
 
 ## 🚉 Current status    
 EOIs and draft protocl.      
