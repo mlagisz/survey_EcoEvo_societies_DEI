@@ -4,7 +4,7 @@
 
   
 
-(If you are reading this on GitHub, you can also see this repository as a webpage [here](https://github.com/mlagisz/survey_EcoEvo_societies_DEI)🌍).   
+(If you are reading this on GitHub, you can also see this repository as a webpage [here](https://mlagisz.github.io/survey_EcoEvo_societies_DEI/)🌍).   
 
 ## 🔖 Background   
 Learned societies lead and support researchers from around the world. They are often at the forefront of culture change in the research community. However, they can also unintentionally entrench and propagate existing biases in academia. For example,  members of traditionally underrepresented and marginalised groups may be subject to a ‘minority tax’ when they are tasked with fixing the system which has been set up by people with extreme privilege. Such roles are often associate wth DEI committees, or similar structures (e.g. DIE officers). However, currently there only exists anecdotal evidence on the composition of DEI structures in terms of gender and other characteristics that could be interpreted as indices of diversity and representation. As such, quantifying composition of DEI structures can provide tangible evidence on potential biases and a base for action to rectify such biases. In this project, we will focus on a pre-determined sample of international learned societies in the fields of Ecology and Evolutionary Biology from an earlier project.  
