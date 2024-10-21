@@ -10,7 +10,7 @@ filename: CONTRIBUTING.md
 # CONTRIBUTION GUIDE    
 
 
-**Our mission statement:** *Making "best paper" awards for young researchers more equitable and open.* 🌟  
+**Our mission statement:** *Making science more equitable and open.* 🌟  
 
 
 ## 💛  Contributing 

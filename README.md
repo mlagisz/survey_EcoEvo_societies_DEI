@@ -1,6 +1,6 @@
 # Diversity of DEI committees across international learned societies in Ecology and Evolutionary Biology 
 
-**Our mission statement:** *Making DEI structures more equitable and open.* 🌟  
+**Our mission statement:** *Making science more equitable and open.* 🌟  
 
   
 
