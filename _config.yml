@@ -1,4 +1,4 @@
-remote_theme: pages-themes/minimal@v0.2.0 
+remote_theme: pages-themes/slate@v0.2.0
 plugins:
   - jekyll-remote-theme 
 gems:
@@ -6,5 +6,5 @@ gems:
 relative_links:
   enabled: true
   collections: true
-title: "Survey of EcoEvo sopcieties DEI structures" 
+title: "Survey of EcoEvo societies - DEI structures" 
 description: Information about the project
