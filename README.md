@@ -7,7 +7,7 @@
 (If you are reading this on GitHub, you can also see this repository as a webpage [here](https://mlagisz.github.io/survey_EcoEvo_societies_DEI/)🌍).   
 
 ## 🔖 Background   
-Learned societies lead and support researchers from around the world. They are often at the forefront of culture change in the research community. However, they can also unintentionally entrench and propagate existing biases in academia. For example,  members of traditionally underrepresented and marginalised groups may be subject to a ‘minority tax’ when they are tasked with fixing the system which has been set up by people with extreme privilege. Such roles are often associate wth DEI committees, or similar structures (e.g. DIE officers). However, currently there only exists anecdotal evidence on the composition of DEI structures in terms of gender and other characteristics that could be interpreted as indices of diversity and representation. As such, quantifying composition of DEI structures can provide tangible evidence on potential biases and a base for action to rectify such biases. In this project, we will focus on a pre-determined sample of international learned societies in the fields of Ecology and Evolutionary Biology from an earlier project.  
+Learned societies lead and support researchers from around the world. They are often at the forefront of culture change in the research community. However, they can also unintentionally entrench and propagate existing biases in academia. For example,  members of traditionally underrepresented and marginalised groups may be subject to a ‘minority tax’ when they are tasked with fixing the system which has been set up by people with extreme privilege. Such roles are often associate wth DEI committees, or similar structures (e.g. DEI officers). However, currently there only exists anecdotal evidence on the composition of DEI structures in terms of gender and other characteristics that could be interpreted as indices of diversity and representation. As such, quantifying composition of DEI structures can provide tangible evidence on potential biases and a base for action to rectify such biases. In this project, we will focus on a pre-determined sample of international learned societies in the fields of Ecology and Evolutionary Biology from an earlier project.  
 
 ## 🏹 Aims and approach  
 This project aims to  evaluate types and sizes of DEI structures and assess potential biases in the lists of members and leaders of these DEI structures. We will conduct a survey of a sample of international learned societies in the fields of Ecology and Evolutionary Biology with publicly available information on DEI structures. Our findings will be openly available and disseminated in the research community.      
@@ -29,9 +29,9 @@ Overall, when you work with us:
 - We expect all project contributors to familiarise themselves and follow our [CODE OF CONDUCT](/CODE_OF_CONDUCT.md).   
 - If you would like to comment on this project or provide suggestions to improve it, feel free to open an issue on GitHub or reach directly to us via email or a dedicated SORTEE (the Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology, www.sortee.org) Slack channel (join SORTEE and get invited to their Slack workspace, then join channel #conf2024-h05-diversity-of-dei-committees-across-international-learned-societies.
 - Our main way of communicating is via emails and comments on shared Google Docs (used for data collection). We will email specific contributing instructions to the project participants, for the project tasks they sign up to.
-- We will provide clarifications and answer questions via email and dedicated Slack channel, as needed (so get in touch when you need help or explanations). Please let us know when you are stuck or you do not have time to finish a given task, so we can find replacement and keep moving forward. 
+- We will provide clarifications and answer questions via email and dedicated Slack channel, as needed (please get in touch when you need help or explanations). Please let us know when you are stuck or you do not have time to finish a given task, so we can find replacement and keep moving forward. 
 - We periodically send you updates on the project progress. 
-- All contributions to this project are voluntary. We will not proide financial renumaration for any contributions (we have no dedicated funding).
+- All contributions to this project are voluntary. We will not provide financial renumeration for any contributions (we have no dedicated funding).
 - You can withdraw from the project at any time.  
 
 ## 🗺 Workflow
@@ -41,7 +41,7 @@ Overall, when you work with us:
 ![Tentative timeline](SORTEE2024_project_timeline.png)
 
 ## 🚉 Current status    
-EOIs and draft protocl.      
+EOIs and draft protocol.      
 
 ## 🚀 Protocol   
 Final protocol will be publicly archived on OSF at [LINK to be added].    
