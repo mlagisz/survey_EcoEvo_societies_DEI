@@ -1,0 +1,2160 @@
+---
+title: "ESM: Priced out of belonging? Insufficient concessions on membership fees across international societies in ecology and evolution"
+date: "19/12/2024"
+author: "M.Lagisz"
+output:
+  html_document: 
+   toc: true
+   toc_float: true
+   toc_depth: 4
+   number_sections: true
+   theme: united
+   highlight: tango
+   code_folding: hide
+  word_document: 
+   toc: true
+   toc_depth: 4
+   number_sections: false
+   highlight: tango
+format:
+  html:
+    embed-resources: true
+editor_options:
+  chunk_output_type: console
+---
+
+# Manuscript details  
+
+Title: Priced out of belonging? Insufficient concessions on membership fees across international societies in ecology and evolution.   
+
+Journal: Proceedings of the Royal Society B.   
+
+DOI: https://doi.org/10.1098/rspb.2024.1430.   
+
+Authors and affiliations:   
+-	Malgorzata Lagisz,   
+Evolution & Ecology Research Centre, School of Biological, Earth & Environmental Sciences, Kensington Campus, Sydney 2052 NSW, Australia; Department of Biological Sciences, University of Alberta, Edmonton, AB T6G 2E9, Canada; ORCID 0000-0002-3993-6127;   
+-	Kevin R. Bairos-Novak
+University of Queensland, School of the Environment, Brisbane 4072 QLD, Australia; ORCID 0000-0002-0152-1452;   
+-	April Robin Martinig,   
+University of British Columbia, Department of Biology, 1177 Research Road, Kelowna, BC V1V 1V7, Canada; University of New South Wales, Evolution & Ecology Research Centre, School of Biological, Earth & Environmental Sciences	Kensington Campus, Sydney 2052 NSW, Australia; ORCID 0000-0002-0972-6903;   
+-	Michael G. Bertram,   
+Swedish University of Agricultural Sciences, Department of Wildlife, Fish, and Environmental Studies, Umeå SE-907 36, Sweden; Department of Zoology, Stockholm University, Stockholm 114 18, Sweden; School of Biological Sciences, Monash University, Melbourne 3800, Australia; ORCID 0000-0001-5320-8444;   
+-	Ayumi Mizuno,   
+University of New South Wales, Evolution & Ecology Research Centre, School of Biological, Earth & Environmental Sciences	Kensington Campus, Sydney 2052 NSW, Australia; ORCID 0000-0003-0822-5637;   
+-	Saeed Shafiei Sabet,   
+University of Guilan, Fisheries Department, Faculty of Natural Resources	P.O.Box 1144, Sowmeh Sara, Iran; ORCID 0000-0001-5919-2527;   
+-	Matthieu Paquet,   
+CNRS	Theoretical and Experimental Ecology Station (SETE), UAR 2029	2 route du CNRS, 09200 Moulis, France	; ORCID 0000-0003-1182-2299;   
+-	Manuela S. Santana,   
+Federal University of Paraná, Centre for Marine Studies, Pontal do Paraná - State of Paraná, 83255-000, Brazil; ORCID 0000-0002-4101-595X;   
+-	Eli S. J. Thoré,   
+Laboratory of Adaptive Biodynamics, Research Unit of Environmental and Evolutionary Biology, Institute of Life, Earth, and Environment, University of Namur, Rue de Bruxelles 61, Namur 5000, Belgium; Swedish University of Agricultural Sciences, Department of Wildlife, Fish, and Environmental Studies, Umeå SE-907 36, Sweden; TRANSfarm - Science, Engineering, & Technology Group, KU Leuven, Lovenjoel 3360, Belgium; ORCID 0000-0002-0029-8404;   
+-	Nina Trubanová,   
+University College Dublin, School of Biology and Environmental Science, Belfield, Dublin 4, Ireland; ORCID 0000-0001-8156-3304;   
+-	Joanna Rutkowska,   
+Jagiellonian University, Institute of Environmental Sciences, Faculty of Biology, Gronostajowa 7, 30-387 Kraków, Poland; ORCID 0000-0003-0396-1790;   
+-	James A. Orr,   
+University of Oxford	Department of Biology, Oxford, UK; School of the Environment, The University of Queensland, Queensland 4072, Australia; ORCID 0000-0002-6531-5623;   
+-	Elina Takola,   
+Helmholtz-Centre for Environmental Research-UFZ, Department of Computational Landscape Ecology, Permoserstraße 15, 04318, Leipzig, Germany; ORCID 0000-0003-1268-5513;   
+-	Yefeng Yang,   
+Evolution & Ecology Research Centre, School of Biological, Earth & Environmental Sciences, Kensington Campus, Sydney 2052 NSW, Australia; ORCID 0000-0002-8610-4016;   
+-	Patrice Pottier,   
+Evolution & Ecology Research Centre, School of Biological, Earth & Environmental Sciences, Kensington Campus, Sydney 2052 NSW, Australia; ORCID 0000-0003-2106-6597;   
+-	Dylan G. E. Gomes,   
+Ocean Ecology Lab, Marine Mammal Institute, Oregon State University; Newport, OR, 97365, USA; Current affiliation: United States Geological Survey, Forest and Rangeland Ecosystem Science Center, Seattle, WA, 98195, USA; ORCID 0000-0002-2642-3728;   
+-	Ying-Chi Chan,   
+Swiss Ornithological Institute	, Seerose 1, 6204 Sempach, Switzerland; ORCID 0000-0002-7183-4411;   
+-	Zhenzhuo Xian,   
+University of New South Wales, School of Biology and Environmental Science, Kensington Campus, Sydney 2052 NSW, Australia; ORCID 0009-0000-4272-4857;   
+-	Caleb Onoja Akogwu,   
+University of Chinese Academy of Sciences	Department of Botany	No. 201 Juifeng 1st Road, East Lake High-tech Development Zone, 430074, Wuhan, Hubie Province, China; CAS Key Laboratory of Plant Germplasm Enhancement and Specialty Agriculture, Wuhan Botanical Garden, Chinese Academy of Sciences, China; ORCID 0009-0004-8342-4964;   
+-	Szymon M. Drobniak,   
+Jagiellonian University, Institute of Environmental Sciences, Gronostajowa 7, 30-387 Krakow, Poland; University of New South Wales, School of Biological, Environmental and Earth Sciences, Sydney, Australia; ORCID 0000-0001-8101-6247;   
+-	Shinichi Nakagawa,   
+Department of Biological Sciences, University of Alberta, Edmonton, AB T6G 2E9, Canada; Evolution & Ecology Research Centre, School of Biological, Earth & Environmental Sciences, Kensington Campus, Sydney 2052 NSW, Australia; ORCID 0000-0002-7765-5182;   
+
+
+# Data and code    
+
+Prepare computational environment:    
+
+```{r}
+#set global code chunk parameters for knitting:  
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
+
+#load libraries (install if absent):  
+pacman::p_load(tidyverse, #various tools
+               here, #easy file paths
+               forcats, #category wrangling
+               countrycode, #country codes and continents
+               rstatix, #statistical tests
+               DT, #data tables
+               knitr, #document knitting
+               ggimage, #adding images
+               ggcharts, #plots functionality
+               ggmosaic, #mosaic plots
+               scales, #plots extra
+               readxl, #loading Excel
+               forcats, #category wrangling
+               ggupset, #upset plots
+               patchwork, #plot assembly
+               stringr, #text wrangling
+               ggbeeswarm, #beeswarm plots
+               tidytext, #text processing
+               stopwords, #text processing
+               tokenizers, #text processing
+               ggpattern, #patterning for plots
+               wacolors, #color-blind friendly color palettes
+               lme4, #linear models
+               sjPlot) #for tab_model reporting
+
+## may need:
+# install.packages("remotes")
+# remotes::install_github("coolbutuseless/ggpattern")
+library(ggpattern)
+
+## set a global plotting theme with background transparency:   
+theme_set(theme_classic(base_size = 14) + 
+            theme(panel.background = element_blank(), 
+                  plot.background = element_blank(), 
+                  legend.background = element_blank(), 
+                  text = element_text(colour = "white")))
+
+#color-blind friendly color palettes: https://cran.r-project.org/web/packages/khroma/vignettes/tol.html#light
+```
+
+
+## Load data       
+
+Load data and an prepare associated meta-data table:   
+
+```{r, results = "hide"}
+# accessing all the sheets 
+#sheet_names <- excel_sheets(here("data", "scimagojr 2021  Subject Areas.xlsx"))
+dat <- read.csv(here("data", "MASTER EcoEvo_membership_fees_v1 - reconciled_data_final.csv"))
+dim(dat)
+#names(dat)
+dat <- dat %>% select(-starts_with('extractor'))  #remove columns with extractor names
+#View(dat)
+ 
+#create a meta-data table with rows from current columns names:       
+dat_meta <- tibble("original column name" = names(dat),
+                   "description" = c("Full name of the society - (the name from the master list, do not include or add abbreviated name).", 
+                                     "Society info source - Main source of society information (usually, the main webpage address of the society).", 
+                                     "Society base country - Country where society has been originally established / registered or has headquarters. Note: It will usually match the currency in which membership is paid, so if e.g. headquarters/chapters are in more than one country, only enter the country that matches the payment currency. Use the following abbreviations: USA and UK; for all other countries use the full name of the country.", 
+                                     "Society type: International by name - (society name includes “International”, or continent, or a broad region, or an equivalent term); National by name - (society name includes the name of its country of origin, e.g. Japanese, Indian, British, American or equivalent); International by chapter - (society claims to have international chapters / branches / sections, i.e. in other countries or regions than the original country, e.g. Ecological Society of America has a Latin America and the Caribbean Chapter); International by aims or scope of activities - (select if none of the other options fit - i.e. only select this one if you did not tick any of the other boxes)", 
+                                     "EDI (Equity, Diversity, Inclusion) statement present - Does the society have an EDI (Equity, Diversity, Inclusion) statement on the website or policy documents?", 
+                                     "EDI (Equity, Diversity, Inclusion) structures present - Does the society have an EDI (Equity, Diversity, Inclusion) structure (e.g, a dedicated committee, section, or an officer)?", 
+                                     "EDI comment - Note or copy and paste any relevant information on EDI statement or structure (e.g., where it can be found).", 
+                                     "Membership fees source - Membership fees source of information (usually, a sub-page or a document). Ideally, copy and paste a link to an online page/document with information on membership fees.", 
+                                     "Record currency of society fees. Use USD, if provided. Use ISO 4217 currency codes (e.g., USD, EUR, AUD).", 
+                                     "Standard individual regular membership fee per year - Only record the number, in the currency used by the society. If necessary, divide by the number of years the fee covers (e.g., for 3-year membership divide the fee by 3). For free membership, record 0. If information or a given fee type is not available, leave it empty. If multiple levels of regular fees are available (e.g., depending on country / region / income / mode of payment), record the highest one and add a comment below. Exception: if there is a lower fee without a mailed printed copy of a journal, select this online-only subscription fee category instead of a fee with a printed copy (here we assume it is not a significant benefit worth paying a higher fee and most regular members would be happy with online access only).", 
+                                     "Comment on the standard individual regular membership fee per year - Any comments, e.g. the name of the membership category used on the website, you can also copy and paste relevant text.", 
+                                     "Standard individual student membership fee per year - Only record the number, in the currency used by the society. If necessary, divide by the number of years the fee covers (e.g., for 3-year membership divide the fee by 3). For free membership record 0. If information or a given fee type is not available, leave empty. If multiple levels of student fees are available (e.g., depending on country / region / income), record the highest one and add a comment below. Exception: if there is a lower fee without a mailed printed copy of a journal, select this online-only subscription fee category instead of a fee with a printed copy (here we assume it is not a significant benefit worth paying a higher fee and most student members would be happy with online access only).", 
+                                     "Comment on the standard individual student membership fee per year - Any comments, e.g. the name of the membership category used on the website, you can also copy and paste relevant text.", 
+                                     "Standard individual postdoc membership fee per year - Only record the number, in the currency used by the society. If necessary, divide by the number of years the fee covers (e.g., for 3-year membership divide the fee by 3). For free membership record 0. If information or a given fee type is not available, leave empty. If multiple levels of postdoc fees are available (e.g., depending on country / region / income), record the highest one and add a comment below. Exception: if there is a lower fee without a mailed printed copy of a journal, select this online-only subscription fee category instead of a fee with a printed copy (here we assume it is not a significant benefit worth paying a higher fee and most postdoc members would be happy with online access only).", 
+                                     "Comment on the standard individual postdoc membership fee per year - Any comments, e.g. the name of the membership category used on the website, you can also copy and paste relevant text.", 
+                                     "Eligibility timeframe for standard individual postdoc membership fee - Only record the number of years representing either the number of years after PhD award when this fee category can be applied (e.g., within 2 years after PhD) or for how many years the fee category can be used (e.g., can be used for a maximum of 2 years). If no postdoc fees or no information on the timeframe, leave empty.", 
+                                     "Comment on the eligibility timeframe for standard individual postdoc membership - Any comments, you can also copy and paste relevant text.", 
+                                     "Discounted fees available for individual members from some countries or regions - Select YES if the description mentions any discounts based on researcher location/affiliation. - Select NO if the description does not mention any discounts based on researcher location/affiliation (in the next question, you can copy and paste relevant text or make a note).", 
+                                     "Countries or regions eligible for discounted/waived fees - Copy and paste from society documents (e.g., low-income countries, Global South, specific country names)", 
+                                     "Comment on countries or regions eligible for discounted/waived fees - Any additional comments (e.g., multiple discount levels, or additional conditions such as a limit on the number of years with discount)", 
+                                     "Increased fees available for individual members from some countries or regions (e.g. outside society’s home country)  - Select YES if the description mentions any fee increase based on researcher location/affiliation. - Select NO if the award description does not mention any fee increase based on researcher location/affiliation (in the next question you can copy and paste relevant text or make a note).", 
+                                     "Countries or regions eligible for increased fees - Copy and paste from society documents (e.g., low-income countries, Global South, specific country names).", 
+                                     "Comment on countries or regions eligible for increased fees - Copy and paste from society documents (e.g., any foreign countries, developed countries, high-income countries, specific country names).",  
+                                     "Discounted individual membership fees available for the following groups, as stated in the membership information. More than one choice is possible.  - STUDENT includes university students at any level (undergraduate, postgraduate).   - POSTDOC includes early career researchers (ECR) after PhD (excluding students).   - JUNIOR includes  pre-university students (e.g., high school).   - NON-ACADEMIC SPECIALIST includes educators / outreach / communication and similar professionals.   - FEES PROPORTIONAL TO INCOME BRACKETS - here we mean only personal/individual income (salary) not the country-level income or development status.   - ignore lifetime memberships (do not code them as OTEHR).",  
+                                     "Comment on groups eligible for discounted fees - Any comments on the above categories (e.g., what are the “other” discounts ps not captured above, time limits on discounts).", 
+                                     "Complete or partial individual membership fee waivers available on individual request - Code YES if additional individual-based fee waivers/discounts available on request (e.g., due to any special circumstances). In the next question you can copy and paste relevant text from the award document or make a note if no such document/information is available.", 
+                                     "Comment on individual requests for discounted fees or waivers - Wording of the eligibility criteria in relation to individual waivers or discounts (e.g., application procedure or no questions asked fee waiver).", 
+                                     "Voluntary donations not linked to membership application - Code YES if society explicitly accepts or asks for such donations (e.g., on top of membership fee, or as a separate payment). This includes only donations that do not result in the membership status and do not come with any other direct benefits to the donating person, such as subscriptions, website access, etc.; donors names being listed somewhere are ok.", 
+                                     "Comment on voluntary donations not linked to membership application - You can note anything relevant or unclear regarding donations.", 
+                                     "Individual full membership benefits - select all applicable benefits for full/regular/standard members (excluding voting rights, volunteering etc.), as stated or inferred from the society website/documents.  Focus on what s listed on the page advertising membership, you do not need to search the whole website to collect all activities society provides.", 
+                                     "Comment on society membership benefits - Copy and paste from the website/documents and add any relevant notes on the society membership benefits (e.g., define OTHER, cannot find explicit information, no information / not clear what the benefits are, add any comments on special conditions and restrictions).", 
+                                     "Comments_general - Add any other notes and comments on issues, assumptions, or seeking additional information, for a given society in general.", 
+                                     "Whether given data row should be potentially removed from analyses due to society deemed as irrelevant to ecology and evolutionary biology during extraction stage.", 
+                                     "Whether given data row should be potentially removed from analyses due to society not providing any extractable information on their membership fees.", 
+                                     "Whether membership fees are provided in more than one currency on their website/documents."),
+                   "data type [options]" = c("Singular variable: text", 
+                                             "Singular variable: link", 
+                                             "Singular variable: text", 
+                                             "Plural variable: International by name / National by name / International by chapter / International by aims or scope of activities", 
+                                             "Singular variable: yes / no", 
+                                             "Singular variable: yes / no", 
+                                             "Singular variable: text", 
+                                             "Singular variable: link", 
+                                             "Singular variable: text", 
+                                             "Singular variable: number", 
+                                             "Singular variable: text", 
+                                             "Singular variable: number", 
+                                             "Singular variable: text", 
+                                             "Singular variable: number", 
+                                             "Singular variable: text", 
+                                             "Singular variable: number", 
+                                             "Singular variable: text", 
+                                             "Singular variable: yes / no", 
+                                             "Singular variable: text", 
+                                             "Singular variable: text", 
+                                             "Singular variable: yes / no", 
+                                             "Singular variable: text", 
+                                             "Singular variable: text", 
+                                             "Plural variable: student / postdoc / ECR (excluding students) / retired/emeritus / unemployed / employed part-time / junior / family / non-academic specialists / general community/public / fees proportional to income brackets / discretionary fee amount / no fees / other", 
+                                             "Singular variable: text", 
+                                             "Singular variable: yes / no", 
+                                             "Singular variable: text", 
+                                             "Singular variable: yes / no",
+                                             "Singular variable: text", 
+                                             "Plural variable: Conference registration discount or waiver / Funding (e.g., travel awards/grants, research funding, prizes) / Journal subscription discount or waiver / Publication fees (APC) discount or waiver / Networking or professional development (e.g., membership platform,  mentoring, exclusive webinars, workshops, training courses) / Other", 
+                                             "Singular variable: text",
+                                             "Singular variable: text",
+                                             "Binary variable: 1 / 0",
+                                             "Binary variable: 1 / 0",
+                                             "Binary variable: 1 / 0"
+                   ))
+```
+
+
+## Meta-data  
+
+*Meta-data for the extracted data on membership fees of ecological and evolutionary societies (matches Table S2) *.   
+```{r}
+## making a html table:
+#  kable(dat_meta, "html") #%>%
+#  kable_styling("striped", position = "left") #%>%
+#  scroll_box(width = "100%", height = "1500px")
+```
+
+
+## Clean and summarise data   
+
+```{r}
+#dim(dat)
+
+#Rename selected variables (columns) to shorter names for analyses
+dat <- dat %>% rename( society = "Full.name.of.the.society", 
+                       society_link = "Society.info.source",
+                       society_country = "Society.base.country", 
+                       society_type = "Society.type", 
+                       society_EDI_statement = "EDI..Equity..Diversity..Inclusion..statement.present", 
+                       society_EDI_structure = "EDI..Equity..Diversity..Inclusion..structure.present", 
+                       society_EDI_comment = "EDI.comment", 
+                       fees_info_source = "Fees.info.source", 
+                       fees_currency = "Currency.of.society.fees", 
+                       fee_regular = "Standard.individual.regular.membership.fee.per.year", 
+                       fee_regular_comment = "Comment.on.the.standard.individual.regular.membership.fee.per.year", 
+                       fee_student = "Standard.individual.student.membership.fee.per.year", 
+                       fee_student_comment = "Comment.on.the.standard.individual.student.membership.fee.per.year", 
+                       fee_postdoc = "Standard.individual.postdoc.membership.fee.per.year", 
+                       fee_postdoc_comment = "Comment.on.the.standard.individual.postdoc.membership.fee.per.year", 
+                       postdoc_eligibiity_years =  "Eligibility.timeframe.for.standard.individual.postdoc.membership.fee", 
+                       postdoc_eligibiity_comment = "Comment.on.the.eligibility.timeframe.for.standard.individual.postdoc.membership.fee", 
+                       countries_payless = "Discounted.fees.available.for.individual.members.from.some.countries.or.regions", 
+                       countries_payless_which = "Countries.or.regions.eligible.for.discounted.waived.fees", 
+                       countries_payless_comment = "Comment.on.countries.or.regions.eligible.for.discounted.waived.fees", 
+                       countries_paymore = "Increased.fees.imposed.on.individual.members.from.some.countries.or.regions..e.g..outside.society.s.home.country.", 
+                       countries_paymore_which = "Countries.or.regions.eligible.for.increased.fees", 
+                       countries_paymore_comment = "Comment.on.countries.or.regions.eligible.for.increased.fees", 
+                       discount_types = "Discounted.individual.membership.fees.available.for.the.following.groups", 
+                       discount_types_comment = "Comment.on.groups.eligible.for.discounted.fees", 
+                       individual_waivers = "Complete.or.partial.individual.membership.fee.waivers.available.on.individual.request", 
+                       individual_waivers_comment = "Comment.on.individual.requests.for.discounted.fees.or.waivers", 
+                       voluntary_donations = "Voluntary.donations.not.linked.to.membership.application", 
+                       voluntary_donations_comment = "Comment.on.voluntary.donations.not.linked.to.membership.application", 
+                       benefits_types = "Individual.full.membership.benefits", 
+                       benefits_types_comment = "Comment.on.society.membership.benefits", 
+                       comments_general = "Comments_general", 
+                       censor_irrelevant = "Censor.irrelevant", 
+                       censor_noinfo = "Censor.noinfo", 
+                       multiple_currencies = "Multiple.currencies" 
+)
+
+#names(dat)
+
+# sum(dat$censor_irrelevant) #2 rows with non-eligible societies
+
+#Remove 2 rows with ineligible societies using censor_irrelevant column:
+dat <- subset(dat, censor_irrelevant == 0) #subsetting the data frame
+```
+
+Find and remove societies without published fees information:    
+
+```{r}
+# sum(dat$censor_noinfo) #9 societies  without fees information
+
+#show names of societies with no info
+dat %>% filter(censor_noinfo == 1) %>% select(society)
+
+#Remove 9 rows with ineligible societies using censor_noinfo column:
+dat <- subset(dat, censor_noinfo == 0) #subsetting the data frame
+
+#dim(dat)
+```
+
+
+Find and remove societies with free membership for everyone:   
+
+```{r}
+dat[dat$fee_regular == 0, "society"] # 4 societies with free membership
+
+#Remove 4 rows with ineligible societies using censor_noinfo column:
+dat <- subset(dat, fee_regular != 0) #subsetting the data frame
+
+#dim(dat) #169 remaining
+```
+
+Number of societies remaining for analyses: `r dim(dat)`.    
+
+
+
+##Individual full membership, student, and postdoctoral fees   
+
+Recalculate values into USD for fee_regular, fee_student, fee_postdoc:    
+
+```{r}
+# Create dataframe with exchange rates from GoogleFinance (2024/02/23) 
+rates_df = data.frame(fees_currency = c('ARS','AUD','CHF','CZK','EUR','GBP','HUF','INR','JPY','KES','KRW','NOK','NZD','PHP','PLN','RON','THB','USD','ZAR'),
+                      exchange_rate_USD = c(0.0012, 0.6569, 1.1354, 0.0427, 1.0828, 1.267, 0.0028, 0.0121, 0.0066, 0.0069, 0.0008, 0.0952, 0.6197, 0.0179, 0.2502, 0.2176, 0.0277, 1, 0.0519))
+
+#use left_joint to add to the main data set
+dat <- left_join(dat, rates_df, by = c("fees_currency" = "fees_currency"))
+
+#recalculate fee_regular,  fee_student, fee_postdoc into USD
+dat <- dat %>% mutate(fee_regular_USD = fee_regular * exchange_rate_USD,
+                      fee_student_USD = fee_student * exchange_rate_USD,
+                      fee_postdoc_USD = fee_postdoc * exchange_rate_USD)
+```
+
+Availability of fee_regular_USD, fee_student_USD, fee_postdoc_USD data:   
+
+ - Number of records with regular fee values in USD: `r sum(!is.na(dat$fee_regular_USD))` ( `r round(sum(!is.na(dat$fee_regular_USD))/length(dat$fee_regular_USD)*100, 1)`%).   
+
+ - Number of records with student fee values in USD: `r sum(!is.na(dat$fee_student_USD))` ( `r round(sum(!is.na(dat$fee_student_USD))/length(dat$fee_student_USD)*100, 1)`%).   
+
+ - Number of records with postdoc fee values in USD: `r sum(!is.na(dat$fee_postdoc_USD))` ( `r round(sum(!is.na(dat$fee_postdoc_USD))/length(dat$fee_postdoc_USD)*100, 1)`%).   
+
+
+Summarise distributions of fee_regular_USD, fee_student_USD, fee_postdoc_USD:    
+
+```{r}
+#reshape data frame for all fees to be in the same column
+dat_long <- dat %>% 
+  select(society, fee_regular_USD, fee_student_USD, fee_postdoc_USD) %>% 
+  pivot_longer(cols = c(fee_regular_USD, fee_student_USD, fee_postdoc_USD), names_to = "fee_type", values_to = "fee_value")
+
+#calculate mean, mediam, min, max for dat_long  by fee_type
+dat_long %>% 
+  group_by(fee_type) %>% 
+  summarise(mean = mean(fee_value, na.rm = TRUE), 
+            median = median(fee_value, na.rm = TRUE), 
+            min = min(fee_value, na.rm = TRUE), 
+            max = max(fee_value, na.rm = TRUE))
+```
+
+Summarise values of fee_regular_USD, fee_student_USD, fee_postdoc_USD that are > 100 USD:    
+
+```{r}
+## fee_regular_USD
+dat %>% 
+  select(fee_regular_USD) %>% 
+  filter(!is.na(fee_regular_USD)) %>% 
+  count(fee_regular_USD > 100) %>% 
+  mutate(percent = round(n/sum(n)*100, 1))
+
+## fee_student_USD
+dat %>% 
+  select(fee_student_USD) %>% 
+  filter(!is.na(fee_student_USD)) %>% 
+  count(fee_student_USD > 100) %>% 
+  mutate(percent = round(n/sum(n)*100, 1))
+
+## fee_postdoc_USD
+dat %>% 
+  select(fee_postdoc_USD) %>% 
+  filter(!is.na(fee_postdoc_USD)) %>% 
+  count(fee_postdoc_USD > 100) %>% 
+  mutate(percent = round(n/sum(n)*100, 1))
+
+#all
+dat_long %>% 
+  group_by(fee_type) %>% 
+  filter(!is.na(fee_value)) %>% 
+  count(fee_value > 100) -> fee_values_over100
+```
+
+Summarise values of fee_regular_USD, fee_student_USD, fee_postdoc_USD that are > 50 USD:    
+
+```{r}
+## fee_regular_USD > 50
+dat %>% 
+  select(fee_regular_USD) %>% 
+  filter(!is.na(fee_regular_USD)) %>% 
+  count(fee_regular_USD > 50) %>% 
+  mutate(percent = round(n/sum(n)*100, 1))
+
+## fee_student_USD > 50
+dat %>% 
+  select(fee_student_USD) %>% 
+  filter(!is.na(fee_student_USD)) %>% 
+  count(fee_student_USD > 50) %>% 
+  mutate(percent = round(n/sum(n)*100, 1))
+
+## fee_postdoc_USD > 50
+dat %>% 
+  select(fee_postdoc_USD) %>% 
+  filter(!is.na(fee_postdoc_USD)) %>% 
+  count(fee_postdoc_USD > 50) %>% 
+  mutate(percent = round(n/sum(n)*100, 1))
+
+#all
+dat_long %>% 
+  group_by(fee_type) %>% 
+  filter(!is.na(fee_value)) %>% 
+  count(fee_value > 50) -> fee_values_over50
+```
+
+Summarise distribution of % discount for student fees relative to regular fee:    
+
+```{r}
+#reshape data frame for all fees to be in the same column
+dat <- dat %>% 
+  mutate(fee_student_pct = round((fee_student_USD / fee_regular_USD * 100),1)) %>%
+  mutate(fee_student_pct = replace(fee_student_pct, fee_student_pct == 0, NA)) %>% #remove where students pay 0
+  mutate(fee_student_pct = replace(fee_student_pct, fee_student_pct >= 100, NA))  #remove where students pay same
+
+#sort(dat$fee_student_pct) #check
+
+#calculate mean, mediam, min, max for fee_student_pct
+dat %>% 
+  filter(!is.na(fee_student_pct)) %>%
+  filter(fee_student_pct != 100) %>%
+  summarise(mean = mean(fee_student_pct, na.rm = TRUE), 
+            median = median(fee_student_pct, na.rm = TRUE), 
+            min = min(fee_student_pct, na.rm = TRUE), 
+            max = max(fee_student_pct, na.rm = TRUE))
+```
+
+Summarise distribution of % discount for postdoc fees relative to regular fee:    
+
+```{r}
+#reshape data frame for all fees to be in the same column
+dat <- dat %>% 
+  mutate(fee_postdoc_pct = round((fee_postdoc_USD / fee_regular_USD * 100),1)) %>%
+  mutate(fee_postdoc_pct = replace(fee_postdoc_pct, fee_postdoc_pct == 0, NA)) %>% #remove where students pay 0
+  mutate(fee_postdoc_pct = replace(fee_postdoc_pct, fee_postdoc_pct >= 100, NA))  #remove where students pay same
+
+#sort(dat$fee_postdoc_pct) #check
+
+#calculate mean, mediam, min, max for fee_postdoc_pct
+dat %>% 
+  filter(!is.na(fee_postdoc_pct)) %>%
+  summarise(mean = mean(fee_postdoc_pct, na.rm = TRUE), 
+            median = median(fee_postdoc_pct, na.rm = TRUE), 
+            min = min(fee_postdoc_pct, na.rm = TRUE), 
+            max = max(fee_postdoc_pct, na.rm = TRUE))
+```
+
+
+Plot fee values by fee type:
+
+```{r}
+#wacolors$washington_pass #see colour palette
+
+#boxplot with scatters
+fig1A <- dat_long %>% 
+  filter(!is.na(fee_value)) %>%
+  mutate(fee_type = fct_relevel(fee_type, "fee_regular_USD", "fee_postdoc_USD", "fee_student_USD")) %>% #reorder
+  ggplot(aes(x = fee_type, y = fee_value, fill = fee_type)) +
+  geom_boxplot() +
+  scale_fill_manual(values=c("#D9D1BE", "#31543B", "#94AA3D")) +
+  geom_boxplot(alpha = 0.5) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_y_continuous(labels = scales::dollar) +
+  scale_x_discrete(labels = c("regular", "postdoc", "student")) + 
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Fee values by fee type")
+```
+
+#### *Figure 1A - MAIN FIGURE*    
+*Distribution of individual membership fee amounts across three main fee categories of interest: regular, postdoc and student fees.*    
+
+```{r}
+#plot fee_regular_USD vs fee_student_USD
+fig1B <- dat %>% 
+  ggplot(aes(x = fee_regular_USD, y = fee_student_USD)) + #show student fees against regular fees
+  geom_point(colour = "#94AA3D", alpha = 0.5) +  
+  stat_smooth(aes(x = fee_regular_USD, y = fee_student_USD), method = "lm", se = FALSE, colour = "#94AA3D", na.rm = TRUE) + #add linear regression line
+  scale_x_continuous(labels = scales::dollar, limits = c(0, 210)) +
+  scale_y_continuous(labels = scales::dollar, limits = c(0, 130)) +
+  xlab('regular fee') +
+  ylab('discounted fee') +
+  geom_point(aes(x = fee_regular_USD, y = fee_postdoc_USD), colour = "#31543B", alpha = 0.5) + #show postdoc fees against regular fees
+  stat_smooth(aes(x = fee_regular_USD, y = fee_postdoc_USD), method = "lm", se = FALSE, colour = "#31543B", na.rm = TRUE) + #add linear regression line
+  geom_abline(intercept = 0, slope = 0.5, color = "#3E3C3A", linetype = "dashed", linewidth = 0.9) + #add 1:2 line
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "regular fee", 
+       y = "discounted fee", 
+       title = "Regular versus discounted membership fees")
+```
+   
+#### *Figure 1B - MAIN FIGURE*    
+*Regular versus discounted fees for students (lighter green) and postdocs (darker green). Dashed line represents 50% discount.*    
+
+
+Figure 1 - combine 2 panels and save:     
+
+```{r}
+#assemble the panels using patchwork package
+figure1 <- fig1A / fig1B + 
+  plot_layout(ncol = 2, nrow = 1) +
+  plot_annotation(tag_levels = "A")
+#ggsave(plot = figure1, here("plots", "Fig1AB.png"), width = 18, height = 7, units = "cm", dpi = "retina", scale = 1.2)
+#ggsave(plot = figure1, here("plots", "Fig1AB.pdf"), width = 18, height = 7, units = "cm", scale = 1.2)
+```
+
+
+Summarise distribution of the eligibility time frames for postdoc fee discounts:  
+
+```{r}
+# sum(!is.na(dat$postdoc_eligibiity_years)) #15 out of 44 (35%)
+
+dat %>% 
+  filter(!is.na(postdoc_eligibiity_years)) %>% 
+  select(postdoc_eligibiity_years) %>%
+  summarise(mean = mean(postdoc_eligibiity_years), 
+            median = median(postdoc_eligibiity_years), 
+            min = min(postdoc_eligibiity_years), 
+            max = max(postdoc_eligibiity_years))
+```
+
+
+## Country-level fee discounts and waivers   
+
+What is the geographical distribution of the locations (headquarters / registration / incorporation country and continent) of the international societies in ecology and evolution?   
+
+Base countries of societies - number of societies per society_country:   
+
+```{r}
+#table(dat$society_country, useNA = "always")
+#table(is.na(dat$society_country)) #0 - count NA only
+
+#show counts
+# dat %>%
+#      count(society_country) %>%
+#      arrange(desc(n))
+
+#plot as a simple barplot
+dat %>% 
+  #filter(!is.na(society_country)) %>% 
+  count(society_country) %>%
+  ggplot(aes(x = reorder(society_country, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  coord_flip()
+```
+   
+#### *Figure S1. *     
+*Number of societies per country of origin.*    
+
+
+Number of societies per currency:   
+
+```{r}
+#table(dat$fees_currency, useNA = "always")
+#table(is.na(dat$fees_currency)) #4 missing
+
+#show counts
+# dat %>%
+#      count(fees_currency) %>%
+#      arrange(desc(n)) 
+
+#plot as a simple barplot
+dat %>% 
+  filter(!is.na(fees_currency)) %>% 
+  count(fees_currency) %>%
+  ggplot(aes(x = reorder(fees_currency, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  coord_flip()
+```
+   
+#### *Figure S2. *      
+*Number of societies per membership fee currency type*.    
+
+
+Does geographical location of base country affect membership pricing?   
+
+```{r}
+#add new column to code with the continent the society is based in
+dat$continent <- countrycode(sourcevar = dat[, "society_country"],
+                            origin = "country.name",
+                            destination = "continent")
+#splt "Americas" into South and North America:
+dat <- dat %>% mutate(continent = if_else(society_country %in% c("USA", "Canada", "Mexico"), "North America", continent))
+dat <- dat %>% mutate(continent = if_else(society_country %in% c("Brazil", "Argentina"), "South America", continent))                      
+table(dat$continent)  #Mostly Europe and North America
+
+#compare regular full membership fees by continent:
+
+#summarise by continent
+dat %>% 
+  group_by(continent) %>% 
+  summarise(mean = mean(fee_regular_USD, na.rm = TRUE), 
+            SD = sd(fee_regular_USD, na.rm = TRUE), 
+            median = median(fee_regular_USD, na.rm = TRUE), 
+            min = min(fee_regular_USD, na.rm = TRUE), 
+            max = max(fee_regular_USD, na.rm = TRUE))
+
+#boxplot with scatters:
+fig2A <- dat %>% 
+  filter(!is.na(fee_regular_USD)) %>%
+  mutate(continent = fct_relevel(continent, "Africa", "South America", "Asia", "Europe", "Oceania", "North America")) %>% #reorder
+  #mutate(fee_type = fct_relevel(fee_type, "fee_regular_USD", "fee_student_USD", "fee_postdoc_USD")) %>% #reorder
+  ggplot(aes(x = continent, y = fee_regular_USD, fill = continent)) +
+  geom_boxplot() +
+ scale_fill_manual(values = c("#FFFFE5", "#fff7BC", "#FEE391", "#FEC44F", "#FB9A29", "#EC7014")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_y_continuous(labels = scales::dollar) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Regular membership fee values by society base continent")
+```
+   
+#### *Figure 2A - MAIN FIGURE*.   
+*Regular fees by continent*.   
+
+
+Do societies from developed economies discount rates for members from developing economies?   
+On the flip side, do societies from developing economies inflate rates for members from other countries?    
+
+Process society_country into Global South and Global North categories:    
+
+```{r}
+
+GS_nations <- c("India", "China", "Indonesia", "Pakistan", "Nigeria", "Brazil", "Bangladesh", "Ethiopia", "Philippines", "Egypt", "DR Congo", "Vietnam", "Iran", "Thailand", "Tanzania", "South Africa", "Kenya", "Myanmar", "Colombia", "Uganda", "Sudan", "Argentina", "Algeria", "Iraq", "Afghanistan","Morocco", "Saudi Arabia", "Angola", "Yemen", "Peru", "Malaysia",  "Ghana", "Mozambique", "Nepal", "Madagascar", "Ivory Coast", "Venezuela", "Cameroon", "Niger", "North Korea", "Mali", "Burkina Faso", "Syria", "Sri Lanka", "Malawi", "Zambia", "Chile", "Chad", "Ecuador", "Somalia", "Guatemala", "Senegal", "Cambodia", "Zimbabwe", "Guinea", "Rwanda", "Benin", "Burundi", "Tunisia", "Bolivia", "Haiti", "Jordan", "Dominican Republic", "Cuba", "South Sudan", "Honduras", "Papua New Guinea", "Tajikistan", "United Arab Emirates", "Togo", "Sierra Leone", "Laos", "Nicaragua", "Libya", "Paraguay", "Turkmenistan", "El Salvador", "Republic Of The Congo", "Singapore", "Central African Republic", "Liberia", "Palestine", "Lebanon", "Costa Rica", "Mauritania", "Oman", "Panama", "Kuwait", "Eritrea", "Mongolia", "Uruguay", "Bosnia And Herzegovina", "Jamaica", "Gambia",  "Qatar", "Botswana", "Namibia", "Gabon", "Lesotho", "Guinea Bissau", "Equatorial Guinea", "Trinidad And Tobago", "Bahrain", "Timor Leste", "Mauritius", "Eswatini", "Djibouti", "Fiji", "Comoros", "Guyana", "Bhutan", "Solomon Islands", "Suriname", "Cape Verde", "Maldives", "Brunei", "Bahamas", "Belize", "Vanuatu", "Barbados", "Sao Tome And Principe", "Samoa", "Saint Lucia", "Kiribati", "Grenada", "Micronesia", "Tonga", "Seychelles", "Saint Vincent And The Grenadines", "Antigua And Barbuda", "Dominica", "Saint Kitts And Nevis", "Marshall Islands", "Nauru")
+
+#count Global South societies per country in the data set:
+dat %>%
+  filter(!is.na(society_country)) %>%
+  filter(society_country  %in% GS_nations) %>%
+  count(society_country) %>%
+  arrange(desc(n)) #%>% View() #table of GS nations 
+
+#check overlap with GS_nations
+intersect(unique(dat$society_country), GS_nations) #all 6 detected: "Kenya"        "Argentina"    "Philippines"  "India"        "South Africa" "Brazil"  
+setdiff(unique(dat$society_country), GS_nations) #22 not GS
+
+#add new column to code if society is based in Global South country or not
+dat <- dat %>% mutate(GS_country = ifelse(society_country %in% GS_nations, "Global South", "Global North"))
+
+table(dat$GS_country) #only 18 societies from the Global South (6 countries listed above)
+
+#compare full membership fees by GS_nations:
+#boxplot with scatters
+fig2B <- dat %>% 
+  filter(!is.na(fee_regular_USD)) %>%
+  mutate(GS_country = fct_relevel(GS_country, "Global South", "Global North")) %>% #reorder
+  ggplot(aes(x = GS_country, y = fee_regular_USD, fill = GS_country)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#8A6172", "#904459")) + 
+  #scale_fill_manual(values = c("#888888", "#fff7BC")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_y_continuous(labels = scales::dollar) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Regular membership fee values by base country type")
+```
+   
+#### *Figure 2B - MAIN FIGURE*.    
+*Regular fees for Global North and Global South base countries*.    
+
+
+Compare regular fee amounts by base country type:    
+
+```{r}
+#not assuming equal variance using library(rstatix)
+stat.test <- dat %>% 
+  t_test(fee_regular_USD ~ GS_country) %>%
+  add_significance()
+stat.test #SIGNIF
+
+dat %>% cohens_d(fee_regular_USD ~ GS_country, var.equal = FALSE) # effect size
+```
+
+
+Are discounted/waived fees available for individual members from some countries or regions?    
+
+```{r}
+dat %>%
+     count(countries_payless) %>%
+     arrange(desc(n)) 
+
+#table(dat$countries_payless, useNA = "always") #72 yes = 43%
+
+#plot as a simple barplot
+dat %>% 
+  #filter(!is.na(countries_payless)) %>% 
+  count(countries_payless) %>%
+  ggplot(aes(x = reorder(countries_payless, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  coord_flip() 
+```
+   
+#### *Figure S3*.   
+*Availability of country-level membership fee discounts*.   
+
+
+How are eligible countries or regions defined for fee country-levle fee discounts?   
+
+Text mining of country-level discounts descriptions:   
+
+```{r}
+#create list of specific words (stemmed) to count within strings
+specific.words <- c("develop", "low", "middle", "world bank", "worldbank", "south")
+
+#prepare countries_payless descriptions as a single lowercase string
+descriptions <- dat %>% 
+  filter(!is.na(countries_payless)) %>% 
+  select(countries_payless_which) %>% 
+  tolower() #single lowercase string
+
+#sum of all mentions for each word
+specific.words.mentions <- specific.words %>%
+  map_int(~ str_count(tolower(descriptions), .x))
+
+#prepare countries_payless descriptions while keeping them separate for each society
+descriptions2 <- tolower(dat$countries_payless_which) #vector of lowercase strings
+
+#sum of mentions per society for each word (counts only one mention per society)
+specific.words.mentions2 <- specific.words %>%
+  map_int(~ sum(str_detect(descriptions2, .x), na.rm = TRUE))
+
+words.df <- tibble(Words = specific.words, 
+                            Count_all = specific.words.mentions,
+                            Count_once = specific.words.mentions2)
+
+#plot frequencies of specific words - first mentions in countries_payless_which descriptions.   
+  words.df %>%
+    ggplot(aes(x = reorder(Words, Count_all), 
+               y = Count_once)) + 
+    geom_col(width = 0.8, 
+             fill = "#2D3F4A", 
+             alpha = 0.7) +
+    coord_flip() +
+    scale_y_continuous(breaks = c(0, 10, 20, 30, 40, 50), 
+                       limits = c(0, 50)) +
+    theme_bw() + 
+    labs(x = "Word stem", 
+         y = "Count of first mention per society") + 
+    #scale_x_discrete(labels = NULL) + 
+    #labs(x = "")  + #used to remove vertical labels, also breaks = NULL
+    theme(legend.position = "none", axis.title.x = element_text(size = 10))
+```
+   
+#### *Figure S4*.   
+*Numbers of first mentions of selected stemmed words in descriptions of country-level membership fee discounts*.   
+
+
+Intersection of base country type and country-level fee discounts:   
+
+```{r}
+#wacolors$palouse #see colour palette
+#table(dat$countries_payless, dat$GS_country)
+
+## Mosaic plots using ggmosaic:
+
+# fig2C <- ggplot(data = dat) +
+#   geom_mosaic(aes(x = product(countries_payless, GS_country), fill = countries_payless)) +
+#   theme(plot.title = element_text(hjust = 0.5)) + 
+#   scale_fill_manual(values = c("#DDAA33","#DDCC77")) +
+#   geom_mosaic_text(aes(x = product(countries_payless, GS_country), label = after_stat(.wt)), as.label = TRUE) +
+#   theme_minimal() + 
+#   theme(legend.position = "none") +
+#   labs(x = "society based in", y = "country-levele member discounts", title = "Base country type and country-level member discounts")
+
+# fig2C <- ggplot(data = dat) +
+#   geom_mosaic(aes(x = product(GS_country, countries_payless), fill = GS_country)) +
+#   theme(plot.title = element_text(hjust = 0.5)) + 
+#   scale_fill_manual(values = c("#904459", "#DDAA33")) + #,"#904459", "#BB5566"
+#   geom_mosaic_text(aes(x = product(GS_country, countries_payless), label = after_stat(.wt)), as.label = TRUE) +
+#   theme_minimal() + 
+#   theme(legend.position = "none") +
+#   labs(x = "country-level member discounts", y = "society based in", title = "Base country type and country-level member discounts")
+
+## Stacked bar plot:
+fig2C <- ggplot(data = dat, aes(x = GS_country, fill = countries_payless)) +
+    scale_fill_manual("Country-level member fee discounts: ", breaks = c("yes", "no"),
+    guide = "legend", values = c("#C0A43D", "#CCBA98")) +
+    geom_bar(width = 0.6) +
+    geom_text(stat = "count", aes(label = after_stat(count)), 
+              size = 4, color = "white", hjust = 1.5, vjust = 0.5, position = "stack") +
+    theme_bw() +
+    theme(legend.position = "top")+
+    labs(x = "society based in", y = "count of societies") +
+    lims(y = c(0, 160)) +
+    coord_flip()
+```
+   
+#### *Figure 2C - MAIN FIGURE*.  
+*Regular fee country-level discounts by base country type*.   
+
+
+Test for country-level fee discounts and base country type:   
+
+```{r}
+#make contingency table of GS_nations versus country-level discount availability (countries_payless):
+conttable <- table(dat$GS_country, dat$countries_payless) #6/18 (33%) GS have fee discounts for GS, 66/151 (44%) GN have fee discounts for GS
+#rownames(conttable) <- unique(dat$GS_country)
+#colnames(conttable) <- c("no discounts", "discounts")
+fisher.test(conttable) #NS
+```
+
+
+Are increased fees available for individual members from some countries or regions?   
+
+```{r}
+dat %>%
+     count(countries_paymore) %>%
+     arrange(desc(n)) 
+
+#table(dat$countries_paymore, useNA = "always") #23 yes = 13%
+
+#plot as a simple barplot
+dat %>% 
+  #filter(!is.na(countries_paymore)) %>% 
+  count(countries_paymore) %>%
+  ggplot(aes(x = reorder(countries_paymore, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  coord_flip() 
+```
+   
+#### *Figure S5*.   
+*Availability of country-level membership fee increases*.     
+
+
+How are eligible countries or regions defined for fee country-level fee increases?   
+
+Text mining of country-level increases descriptions:   
+
+```{r}
+#create list of specific words (stemmed) to count within strings
+specific.words <- c("develop", "high", "foreign", "outside", "overseas", "north")
+
+#prepare countries_paymore descriptions as a single lowercase string
+descriptions <- dat %>% 
+  filter(!is.na(countries_paymore)) %>% 
+  select(countries_paymore_which) %>% 
+  tolower() #single lowercase string
+
+#sum of all mentions for each word
+specific.words.mentions <- specific.words %>%
+  map_int(~ str_count(tolower(descriptions), .x))
+
+#prepare countries_paymore descriptions while keeping them separate for each society
+descriptions2 <- tolower(dat$countries_paymore_which) #vector of lowercase strings
+
+#sum of mentions per society for each word (counts only one mention per society)
+specific.words.mentions2 <- specific.words %>%
+  map_int(~ sum(str_detect(descriptions2, .x), na.rm = TRUE))
+
+words.df <- tibble(Words = specific.words, 
+                            Count_all = specific.words.mentions,
+                            Count_once = specific.words.mentions2)
+
+#plot frequencies of specific words - first mentions in countries_paymore_which descriptions.   
+  words.df %>%
+    ggplot(aes(x = reorder(Words, Count_all), 
+               y = Count_once)) + 
+    geom_col(width = 0.8, 
+             fill = "#2D3F4A", 
+             alpha = 0.7) +
+    coord_flip() +
+    scale_y_continuous(breaks = c(0, 10, 20), 
+                       limits = c(0, 20)) +
+    theme_bw() + 
+    labs(x = "Word stem", 
+         y = "Count of first mention per society") + 
+    #scale_x_discrete(labels = NULL) + 
+    #labs(x = "")  + #used to remove vertical labels, also breaks = NULL
+    theme(legend.position = "none", axis.title.x = element_text(size = 10))
+```
+   
+#### *Figure S6*.       
+*Numbers of first mentions of selected stemmed words in descriptions of country-level membership fee increases.*     
+
+
+Intersection of base country type and country-level fee increases:   
+
+```{r}
+#wacolors$palouse #see colour palette
+#table(dat$countries_paymore, dat$GS_country)
+
+## mosaic plots using ggmosaic:
+
+# fig2D <- ggplot(data = dat) +
+#   geom_mosaic(aes(x = product(countries_paymore, GS_country), fill = countries_paymore)) +
+#   theme(plot.title = element_text(hjust = 0.5)) + 
+#   scale_fill_manual(values = c("#904459", "#BB5566")) +
+#   geom_mosaic_text(aes(x = product(countries_paymore, GS_country), label = after_stat(.wt)), as.label = TRUE) +
+#   theme_minimal() + 
+#   theme(legend.position = "none") +
+#   labs(x="society based in", y = "country-levele member increases", title = "Base country type and country-level member increases")
+
+# fig2D <- ggplot(data = dat) +
+#   geom_mosaic(aes(x = product(GS_country, countries_paymore), fill = GS_country)) +
+#   theme(plot.title = element_text(hjust = 0.5)) + 
+#   scale_fill_manual(values = c("#904459", "#DDAA33")) + #,"#904459", "#BB5566"
+#   geom_mosaic_text(aes(x = product(GS_country, countries_paymore), label = after_stat(.wt)), as.label = TRUE) +
+#   theme_minimal() + 
+#   theme(legend.position = "none") +
+#   labs(x = "country-level member fee increases", y = "society based in", title = "Base country type and country-level member fee increases")
+
+
+## Stacked bar plot:
+fig2D <- ggplot(data = dat, aes(x = GS_country, fill = countries_paymore)) +
+    scale_fill_manual("Country-level member fee increases: ", breaks = c("yes", "no"),
+    guide = "legend", values = c("#C0A43D", "#CCBA98")) +
+    geom_bar(width = 0.6) +
+    geom_text(stat = "count", aes(label = after_stat(count)), 
+              size = 4, color = "white", hjust = 1.5, vjust = 0.5, position = "stack") +
+    theme_bw() +
+    theme(legend.position = "top")+
+    labs(x = "society based in", y = "count of societies") +
+    lims(y = c(0, 160)) +
+    coord_flip()
+```
+   
+#### *Figure 2D - MAIN FIGURE*.    
+*Regular fee country-level increases by base country type*.   
+
+Figure 2 - combine 4 panels and save:   
+
+```{r}
+#assemble the panels using patchwork package
+figure2 <- fig2A / fig2B / fig2C / fig2D + 
+  plot_layout(ncol = 2, nrow = 2) +
+  plot_annotation(tag_levels = "A")
+#ggsave(plot = figure2, here("plots", "Fig2ABCD.png"), width = 18, height = 12, units = "cm", dpi = "retina", scale = 1.7)
+#ggsave(plot = figure2, here("plots", "Fig2ABCD.pdf"), width = 18, height = 12, units = "cm", scale = 1.7)
+```
+
+
+Test for country-level fee increases and base country type:    
+
+```{r}
+#make contingency table of GS_nations versus country-level discount availability (countries_paymore):
+conttable <- table(dat$GS_country, dat$countries_paymore) #6/18 (33%) GS have fee increases for GS, 66/151 (44%) GN have fee increases for GS
+#rownames(conttable) <- unique(dat$GS_country)
+#colnames(conttable) <- c("no increases", "increases")
+
+fisher.test(conttable) #SIGNIFICANT
+```
+
+
+National versus International societies:     
+
+```{r}
+#table(dat$society_type) #needs cleaning - aggregate into national by name vs. international (not national by name)
+dat$society_NI <- substr(dat$society_type, 1, 1) #Extract first letter 
+# table(dat$society_NI) #52 (31%) national by name
+
+table(dat$continent, dat$society_NI) #North America and Europe more likely to be base of international societies
+fisher.test(table(dat$continent, dat$society_NI)) #p-value = 0.002746
+
+table(dat$GS_country, dat$society_NI) #Global South countries are  more likely to be base of national societies
+fisher.test(table(dat$GS_country, dat$society_NI)) #p-value = 0.0009914, odds ratio:  5.483734, 95 percent confidence interval: 1.765347 19.059671
+```
+
+
+
+## Individual-level discounts and waivers    
+Are discounted individual membership fees currently available for the following groups: students, postdocs, retired/emeritus, unemployed, employed part-time, junior (pre-university), family, educators/outreach/communication non-academic specialists, general community/public, or any other groups?   
+
+Count types of discounts (discount_types need to be splitted):    
+
+```{r}
+#replace "no fees" with "free option" to avoid confusion with "no fees" in dat$discount_types using gsub 
+dat$discount_types <- gsub("no fees", "free option", dat$discount_types)
+
+#count how many have NA = no discounts at all (flat fees)
+table(is.na(dat$discount_types)) #15
+
+#replace NA with "no discounts" to avoid confusion with "no fees"
+dat <- dat %>% mutate(discount_types = ifelse(is.na(discount_types), "no discounts", discount_types))
+
+#create new variable with discount types per society as a list
+dat <- dat %>% mutate(discount_types_list = str_split(dat$discount_types, pattern = ", "))
+
+#create new variable with counts of discount types per society
+dat <- dat %>% mutate(discount_types_count = lengths(discount_types_list))
+
+#simple table of number of discount types per society 
+table(dat$discount_types_count) #60 (35%) have only one type of discount
+
+
+#count each discount by type and show percentage of societies
+dat %>% 
+  unnest(discount_types_list) %>% 
+  count(discount_types_list) %>% 
+  filter(discount_types_list!= "") %>%
+  arrange(desc(n)) %>%
+  mutate(percentage = n/169 * 100) -> discount_types_table
+discount_types_table
+
+#make a simple bar plot
+discount_types_table %>% 
+  filter(discount_types_list!= "") %>%
+  ggplot(aes(x = reorder(discount_types_list, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  lims(y = c(0, 150)) +
+  coord_flip()
+#dat$discount_types_list <- str_split(dat$discount_types, pattern = ", ") #same as above but modifies original data frame
+```
+   
+#### *Figure S7*.   
+*Frequencies of individual-level membership fee discount types*.        
+
+
+Make upset plot to show frequencies of combinations of individual discount types:   
+
+```{r}
+#make upset plot using library(ggupset)
+figure3 <- dat %>% 
+  filter(discount_types_list != "") %>%  
+  mutate(discount_types_list = ifelse(discount_types_list == "no fees", "free option", discount_types_list)) %>%
+  ggplot(aes(x = discount_types_list)) +
+    geom_bar(fill = "#21281D",width = 0.8) +
+    scale_y_continuous(limits = c(0, 40)) +
+    scale_x_upset(order_by = c("freq")) +
+    theme_combmatrix(combmatrix.panel.striped_background = FALSE,
+                    combmatrix.panel.point.color.fill = "#21281D",
+                    combmatrix.panel.line.size = 0,
+                    plot.title = element_text(family = "sans", size = 16, face = "plain", color = "#21281D"),
+                    axis.title.x = element_text(family="sans", size = 12, color = "#21281D", face="plain"), 
+                    axis.title.y = element_text(family="sans", size = 12, color = "#21281D", face = "plain", vjust = -2),
+                    ) + 
+   theme(plot.title = element_text(hjust = 0.5)) +
+    labs(title = "Combinations of main types of fee discounts", 
+         x = "", 
+         y = "count of societies")
+
+#ggsave(plot = figure3, here("plots", "Fig3.png"), width = 18, height = 8, units = "cm", dpi = "retina", scale = 1.5)
+#ggsave(plot = figure3, here("plots", "Fig3.pdf"), width = 18, height = 8, units = "cm", scale = 1.5)
+```
+   
+#### *Figure 3 - MAIN FIGURE*.     
+*Combinations of the main types of individual-level discounts*.       
+
+
+How many individual-level discount categories per society?    
+
+```{r}
+#table of discount counts frequencies
+table(dat$discount_types_count)
+  
+#table with percentages
+round(table(dat$discount_types_count)/length(dat$discount_types_count)*100,1)
+
+#plot number of discountcategories per society
+dat %>%
+  #mutate(text = fct_reorder(text, value)) %>%
+  ggplot(aes(x = discount_types_count)) +
+    geom_histogram(alpha = 0.8, binwidth = 1, fill="black", col="grey") +
+    scale_x_continuous(breaks = seq(1,7, by = 1)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5)) +
+    theme(
+      legend.position = "none",
+      panel.spacing = unit(0.1, "lines"),
+      strip.text.x = element_text(size = 8)
+    ) +
+    labs(title = "Count of discount types per society",
+       x = "count of discounts",
+       y = "count of societies") 
+```
+   
+#### *Figure S8*.    
+*Frequencies of number of discount types per society*.      
+
+
+Are complete or partial individual membership fee waivers currently available on individual request?    
+
+```{r}
+#table(dat$individual_waivers, useNA = "always") #25 yes = 30%
+
+#plot as a simple barplot
+dat %>% 
+  #filter(!is.na(individual_waivers)) %>% 
+  count(individual_waivers) %>%
+  ggplot(aes(x = reorder(individual_waivers, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  coord_flip()
+```
+   
+#### *Figure S9*.   
+*Frequencies of number of individual waivers per society*.     
+
+
+How are they defined and who is eligible?    
+
+```{r}
+# dat %>% 
+#   filter(individual_waivers == "yes") %>% 
+#   select(individual_waivers_comment)
+```
+
+
+
+## Societies’ characteristics      
+
+Do societies with commitment to EDI (Equity, Diversity, Inclusion) stated on the website or policy documents (or having dedicated EDI structures) offer a more inclusive individual membership fee structure (e.g., more options for discounts)?    
+
+Summarise data on EDI statements and structures:     
+
+```{r}
+#Presence of EDI statement  as a simple barplot:
+# dat %>% 
+#   count(society_EDI_statement) %>%
+#   ggplot(aes(x = reorder(society_EDI_statement, n), y = n)) +
+#   geom_bar(stat = "identity", position = position_dodge(0.9)) +
+#   coord_flip()
+# 
+# #Presence of EDI structures as a simple barplot:
+# dat %>% 
+#   count(society_EDI_structure) %>%
+#   ggplot(aes(x = reorder(society_EDI_structure, n), y = n)) +
+#   geom_bar(stat = "identity", position = position_dodge(0.9)) +
+#   coord_flip()
+
+#Presence of a EDI statement as % of all societies
+table(dat$society_EDI_statement, useNA = "always")/nrow(dat)*100 # 46.7% have EDI statement
+
+#Presence of a EDI structure as % of all societies
+table(dat$society_EDI_structure, useNA = "always")/nrow(dat)*100 # 36.7% have EDI structure
+
+
+#A simple table of overlap between presence of EDI statement and structures
+#table(dat$society_EDI_statement, dat$society_EDI_structure)
+
+#table(dat$society_EDI_statement, dat$countries_payless) #more likely with EDI
+ft <- fisher.test(table(dat$society_EDI_statement, dat$society_EDI_structure))
+
+#Plot if societies with EDI statement also have dedicated EDI structures
+#mosaic plot using ggmosaic
+ggplot(data = dat) +
+  geom_mosaic(aes(x = product(society_EDI_structure, society_EDI_statement), fill = society_EDI_structure)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(society_EDI_structure, society_EDI_statement), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +  labs(x = "society has an EDI structure", y = "society has an EDI statement", title = "Society EDI statements and structures")
+
+
+#test if societies with EDI statement also have dedicated EDI structures
+fisher.test(table(dat$society_EDI_statement, dat$society_EDI_structure)) #odds ratio 132.9641, CI: 30.87566 1198.51758, p-value < 2.2e-16
+```
+   
+#### *Figure S10*.   
+*Overlap between presence of EDI statement and structures in societies*.      
+
+
+
+EDI structure vs. base country type:    
+
+```{r}
+#Plot societies with EDI structure vs. base country type
+
+#table(dat$society_EDI_structure, dat$countries_payless) #more likely with EDI
+ft <- fisher.test(table(dat$society_EDI_structure, dat$GS_country))
+
+#mosaic plot using ggmosaic
+ggplot(data = dat) +
+  geom_mosaic(aes(x = product(GS_country, society_EDI_structure), fill = GS_country)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(GS_country, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +  labs(x = "society has an EDI structure", y = "society base country", title = "Society EDI commitment and base country type")
+
+
+#test if societies with EDI structure are more likely to be based in Global North countries
+fisher.test(table(dat$society_EDI_structure, dat$GS_country)) #SIGNIFICANT
+
+#test if societies with EDI statement are more likely to be based in Global North countries
+fisher.test(table(dat$society_EDI_statement, dat$GS_country)) #SIGNIFICANT - same pattern as for EDI structure
+```
+   
+#### *Figure S11*.    
+*Overlap between Presence of EDI structures and structures in societies*.    
+
+
+NOTE: No change in the results below if only done on the Global North countries.    
+
+
+Presence of EDI structures vs number of discount types per society:    
+
+```{r}
+#test if distributions of counts are the same:
+table(dat$discount_types_count, dat$society_EDI_structure) #distributions of counts for societies with and without EDI structure
+ft <- fisher.test(dat$discount_types_count, dat$society_EDI_structure) #p-value = 0.0003035
+```
+
+Adjust labels for plotting society_EDI_structure:   
+
+```{r} 
+#change labels to use for plot facets
+dat$society_EDI_structure2 <- factor(dat$society_EDI_structure, levels = c("no", "yes"),
+                  labels = c("no EDI structure", "has EDI structure"))
+```
+
+Presence of EDI structures vs presence of country-level fee discounts:    
+
+```{r}
+#table(dat$society_EDI_structure, dat$countries_payless) #more likely with EDI
+ft <- fisher.test(table(dat$society_EDI_structure, dat$countries_payless))
+
+#mosaic plot using ggmosaic
+ggplot(data = dat) +
+  geom_mosaic(aes(x = product(countries_payless, society_EDI_structure), fill = countries_payless)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(countries_payless, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has country-level discounts", title = "Society EDI commitment and country-level discounts")
+
+#test if societies with EDI structure also have country-level fee discounts
+fisher.test(table(dat$society_EDI_structure, dat$countries_payless)) #SIGNIFICANT
+
+#test if societies with EDI statement also have country-level fee discounts
+fisher.test(table(dat$society_EDI_statement, dat$countries_payless)) #SIGNIFICANT
+```
+   
+#### *Figure S12*.   
+*Overlap between Presence of EDI structures and country-level fee discounts*.     
+
+
+Presence of EDI structures vs presence of country-level fee increases:    
+
+```{r}
+#table(dat$society_EDI_structure, dat$countries_paymore) #more likely without EDI
+ft <- fisher.test(table(dat$society_EDI_structure, dat$countries_paymore))
+
+#mosaic plot using ggmosaic
+ggplot(data = dat) +
+  geom_mosaic(aes(x = product(countries_paymore, society_EDI_structure), fill = countries_paymore)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(countries_paymore, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has country-level fee increases", title = "Society EDI commitment and country-level fee increases")
+
+#test if societies with EDI structure also have fee waivers on individual request
+fisher.test(table(dat$society_EDI_structure, dat$countries_paymore)) #SIGNIFICANT
+
+#test if societies with EDI statement also have fee waivers on individual request
+fisher.test(table(dat$society_EDI_statement, dat$countries_paymore)) #SIGNIFICANT
+```
+
+#### *Figure S13*.   
+*Overlap between Presence of EDI structures and country-level fee increases*.    
+
+
+Presence of EDI structures vs fee waivers on individual request:     
+
+```{r}
+#table(dat$society_EDI_structure, dat$individual_waivers)
+ft <- fisher.test(table(dat$society_EDI_structure, dat$individual_waivers))
+
+#mosaic plot using ggmosaic
+ggplot(data = dat) +
+  geom_mosaic(aes(x = product(individual_waivers, society_EDI_structure), fill = individual_waivers)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(individual_waivers, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has fee waivers on request", title = "Society EDI commitment and fee waivers on request")
+
+#test if societies with EDI structure also have fee waivers on individual request
+fisher.test(table(dat$society_EDI_structure, dat$individual_waivers)) #SIGNIFICANT
+
+#test if societies with EDI statement also have fee waivers on individual request 
+fisher.test(table(dat$society_EDI_statement, dat$individual_waivers)) #SIGNIFICANT
+```
+   
+#### *Figure S14*.    
+*Overlap between Presence of EDI structures and fee waivers on individual request*.   
+
+
+Prepare data to test tests for other fee categories and EDI structure:    
+```{r}
+dat3 <- dat 
+
+#dat3 %>% unnest(discount_types_list, keep_empty = TRUE)  %>% View() #via unnesting
+
+discount.ids <- unique(unlist(dat3$discount_types_list))
+discount.matrix <- t(sapply(dat3$discount_types_list, function(x) table(factor(x, levels = discount.ids))))
+#str(discount.matrix)
+
+rownames(discount.matrix) <- dat3$society
+dat3 <- cbind(dat3, as_tibble(discount.matrix))
+#names(dat3)
+```
+
+
+Presence of EDI structures vs presence of student fee discounts:    
+
+```{r}
+dat3$student <- factor(dat3$"student")
+levels(dat3$student) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$student)) #SIGNIFICANT - more student discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(student, society_EDI_structure), fill = student)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(student, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has student fee discount", title = "Society EDI commitment and student fee discount")
+```
+   
+#### *Figure S15*.   
+*Overlap between Presence of EDI structures and student fee discounts*.      
+
+
+Presence of EDI structures vs presence of retired/emeritus fee discounts:     
+
+```{r}
+dat3$retired <- factor(dat3$"retired/emeritus")
+levels(dat3$retired) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$retired)) #SIGNIFICANT - more retired/emeritus discounts
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(retired, society_EDI_structure), fill = retired)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(student, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has retired/emeritus fee discount", title = "Society EDI commitment and retired/emeritus fee discount")
+```
+   
+#### *Figure S16*.   
+*Overlap between Presence of EDI structures and retired/emeritus fee discounts*.   
+
+
+Presence of EDI structures vs presence of postdoc fee discounts:    
+
+```{r}
+dat3$postdoc <- factor(dat3$"postdoc / ECR (excluding students)")
+levels(dat3$postdoc) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$postdoc)) #SIGNIFICANT - more postdoc discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(postdoc, society_EDI_structure), fill = postdoc)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(postdoc, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has postdoc fee discount", title = "Society EDI commitment and postdoc fee discount")
+```
+   
+#### *Figure S17*.   
+*Overlap between Presence of EDI structures and postdoc fee discounts*.      
+
+
+Presence of EDI structures vs presence of non-academic specialists fee discounts:    
+
+```{r}
+dat3$specialist <- factor(dat3$"non-academic specialists")
+levels(dat3$specialist) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$specialist)) #SIGNIFICANT - more specialist discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(specialist, society_EDI_structure), fill = specialist)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(specialist, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has specialist fee discount", title = "Society EDI commitment and non-academic specialist fee discount")
+```
+   
+#### *Figure S18*.   
+*Overlap between Presence of EDI structures and non-academic fee discounts*.   
+
+
+Presence of EDI structures vs presence of community fee discounts:    
+
+```{r}
+dat3$community <- factor(dat3$"general community/public")
+levels(dat3$community) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$community)) #NS - no association
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(community, society_EDI_structure), fill = community)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(community, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has community/public fee discount", title = "Society EDI commitment and community/public fee discount")
+```
+   
+#### *Figure S19*.   
+*Overlap between Presence of EDI structures and general community/public fee discounts*.   
+
+
+Presence of EDI structures vs presence of family fee discounts:    
+
+```{r}
+dat3$family <- factor(dat3$"family")
+levels(dat3$family) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$family)) #NS - no more family discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(family, society_EDI_structure), fill = family)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(family, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has family fee discount", title = "Society EDI commitment and family fee discount")
+```
+   
+#### *Figure S20*.   
+*Overlap between Presence of EDI structures and family fee discounts*.   
+
+
+Presence of EDI structures vs presence of junior fee discounts:    
+
+```{r}
+dat3$junior <- factor(dat3$"junior")
+levels(dat3$junior) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$junior)) #NS - no more junior discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(junior, society_EDI_structure), fill = junior)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(junior, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has junior fee discount", title = "Society EDI commitment and junior fee discount")
+```
+   
+#### *Figure S21*.   
+*Overlap between Presence of EDI structures and junior fee discounts*.   
+
+
+Presence of EDI structures vs presence of discretionary fee discounts:    
+
+```{r}
+dat3$discretionary <- factor(dat3$"discretionary fee amount")
+levels(dat3$discretionary) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$discretionary)) #NS - no more discretionary discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(discretionary, society_EDI_structure), fill = discretionary)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(discretionary, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has discretionary fee discount", title = "Society EDI commitment and discretionary fee discount")
+```
+   
+#### *Figure S22*.   
+*Overlap between Presence of EDI structures and discretionary fee discounts*.   
+
+
+Presence of EDI structures vs presence of a "free option" fee discounts:    
+
+```{r}
+dat3$free_option <- factor(dat3$"free option")
+levels(dat3$free_option) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$free_option)) #NS - no more free_option discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(free_option, society_EDI_structure), fill = free_option)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(free_option, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has a free fee option", title = "Society EDI commitment and free fee option")
+```
+   
+#### *Figure S23*.   
+*Overlap between Presence of EDI structures and free option fee discounts*.   
+
+
+Presence of EDI structures vs presence of fees proportional to income brackets (sliding scale):    
+
+```{r}
+dat3$slidingscale <- factor(dat3$"fees proportional to income brackets")
+levels(dat3$slidingscale) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$slidingscale)) #NS - no more sliding scale discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(slidingscale, society_EDI_structure), fill = slidingscale)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(slidingscale, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has sliding scale fee discount", title = "Society EDI commitment and sliding scale fee discount")
+```
+   
+#### *Figure S24*.   
+*Overlap between Presence of EDI structures and sliding scale fees*.   
+
+
+Presence of EDI structures vs presence of unemployed fee discounts:    
+
+```{r}
+dat3$unemployed <- factor(dat3$"unemployed")
+levels(dat3$unemployed) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$unemployed)) #NS - no more unemployed discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(unemployed, society_EDI_structure), fill = unemployed)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(unemployed, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has unemployed fee discount", title = "Society EDI commitment and unemployed fee discount")
+```
+   
+#### *Figure S25*.   
+*Overlap between Presence of EDI structures and unemployed fee discounts*.   
+
+
+Presence of EDI structures vs presence of part-time employment fee discounts:    
+
+```{r}
+dat3$part_time <- factor(dat3$"employed part-time")
+levels(dat3$part_time) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$part_time)) #NS - no more part-time employment discounts with EDI
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(part_time, society_EDI_structure), fill = part_time)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(part_time, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has part-time employment fee discount", title = "Society EDI commitment and part-time employment fee discount")
+```
+   
+#### *Figure S26*.   
+*Overlap between Presence of EDI structures and part-time employment fee discounts*.   
+
+
+Presence of EDI structures vs presence of other fee discounts:    
+
+```{r}
+dat3$other <- factor(dat3$"other")
+levels(dat3$other) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$other)) #NS - no difference
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(other, society_EDI_structure), fill = other)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(other, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has other fee discounts", title = "Society EDI commitment and other fee discounts")
+```
+   
+#### *Figure S27*.   
+*Overlap between Presence of EDI structures and presence of other fee discounts*.   
+
+
+Presence of EDI structures vs presence of fess without any discounts:    
+
+```{r}
+dat3$no_discounts <- factor(dat3$"no discounts")
+levels(dat3$no_discounts) <- list("no" = "0", "yes" = "1")
+ft <- fisher.test(table(dat3$society_EDI_structure, dat3$no_discounts)) #SIGNIFICANT - less likely to have no discounts
+
+#mosaic plot using ggmosaic
+ggplot(data = dat3) +
+  geom_mosaic(aes(x = product(no_discounts, society_EDI_structure), fill = no_discounts)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_fill_manual(values = c("#9970AB", "#E7D4E8")) +
+  geom_mosaic_text(aes(x = product(no_discounts, society_EDI_structure), label = after_stat(.wt)), as.label = TRUE) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  annotate("point", x = 0.5, y = 0.5, size = 40, color = "#AA3377") +
+  annotate("text", label = paste("OR=", round(ft$estimate,2),"\n", "CI=", round(ft$conf.int[1],2), "-", round(ft$conf.int[2],2), "\n p=", round(ft$p.value,3), sep = ""), x = 0.5, y = 0.5, size = 4, colour = "white", fontface = "italic" ) +
+  labs(x = "society has an EDI structure", y = "society has no fee discounts ", title = "Society EDI commitment and no fee discounts")
+```
+   
+#### *Figure S28*.   
+*Overlap between Presence of EDI structures and lack of any fee discounts*.   
+
+
+
+Presence of EDI structures vs regular fee amounts:    
+
+```{r}
+#compare full membership fees by EDI structure:
+#boxplot with scatters
+dat %>% 
+  filter(!is.na(fee_regular_USD)) %>%
+  mutate(society_EDI_structure = fct_relevel(society_EDI_structure, "yes", "no")) %>% #reorder
+  ggplot(aes(x = society_EDI_structure, y = fee_regular_USD, fill = society_EDI_structure)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#fff7BC", "#888888")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_y_continuous(labels = scales::dollar) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Regular membership fee values by society EDI structure")
+```
+   
+#### *Figure S29*.  
+*Regular fees for societies with and without EDI structures*.   
+
+
+Compare regular fee amounts by presence of EDI structures:   
+
+```{r}
+#not assuming equal variance using library(rstatix)
+stat.test <- dat %>% 
+#  filter(GS_country == "Global North") %>%
+  t_test(fee_regular_USD ~ society_EDI_structure) %>%
+  add_significance()
+stat.test #SIGNIF
+
+dat %>% cohens_d(fee_regular_USD ~ society_EDI_structure, var.equal = FALSE) # effect size
+```
+
+
+Presence of EDI structures vs student fee amount:    
+
+```{r}
+#compare full membership fees by EDI structure:
+#boxplot with scatters
+dat %>% 
+  filter(!is.na(fee_student_USD)) %>%
+  mutate(society_EDI_structure = fct_relevel(society_EDI_structure, "yes", "no")) %>% #reorder
+  ggplot(aes(x = society_EDI_structure, y = fee_student_USD, fill = GS_country)) +
+  geom_boxplot() +
+  #scale_fill_manual(values = c("#fff7BC", "#888888")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_y_continuous(labels = scales::dollar) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Student membership fee values by society EDI structure")
+```
+   
+#### *Figure S30*.   
+*Student fees for societies with and without EDI structure*.   
+
+
+Compare student fee amounts by presence of EDI structure:    
+
+```{r}
+#not assuming equal variance using library(rstatix)
+stat.test <- dat %>% 
+#    filter(GS_country == "Global North") %>%
+  t_test(fee_student_USD ~ society_EDI_structure) %>%
+  add_significance()
+stat.test #SIGNIF
+
+dat %>% cohens_d(fee_student_USD ~ society_EDI_structure, var.equal = FALSE) # effect size
+```
+
+
+Presence of EDI structures vs postdoc fee amount:    
+
+```{r}
+#compare full membership fees by EDI structure:
+#boxplot with scatters
+dat %>% 
+  filter(!is.na(fee_postdoc_USD)) %>%
+  mutate(society_EDI_structure = fct_relevel(society_EDI_structure, "yes", "no")) %>% #reorder
+  ggplot(aes(x = society_EDI_structure, y = fee_postdoc_USD, fill = society_EDI_structure)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#fff7BC", "#888888")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  scale_y_continuous(labels = scales::dollar) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Postdoc membership fee values by society EDI structure")
+```
+   
+#### *Figure S31*.   
+*Postdoc fees for societies with and without EDI structures*.    
+
+
+Compare postdoc fee amounts by presence of EDI structures:    
+
+```{r}
+#not assuming equal variance using library(rstatix)
+stat.test <- dat %>% 
+#    filter(GS_country == "Global North") %>%
+  t_test(fee_postdoc_USD ~ society_EDI_structure) %>%
+  add_significance()
+stat.test #SIGNIF
+
+dat %>% cohens_d(fee_postdoc_USD ~ society_EDI_structure, var.equal = FALSE) # effect size
+```
+
+
+Presence of EDI structures vs student fee discount percentage:    
+
+```{r}
+#boxplot with scatters
+dat %>%
+  filter(!is.na(fee_student_pct)) %>%
+  mutate(society_EDI_structure = fct_relevel(society_EDI_structure, "yes", "no")) %>% #reorder
+  ggplot(aes(x = society_EDI_structure, y = fee_student_pct, fill = society_EDI_structure)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#fff7BC", "#888888")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  #scale_y_continuous(labels = scales::percent()) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Student membership fee discount by society EDI structure")
+```
+   
+#### *Figure S32*.    
+*Student discount percent with and without EDI structure*.    
+
+
+Test for student fee discount percentage by EDI structure:   
+
+```{r}
+#not assuming equal variance using library(rstatix)
+stat.test <- dat %>% 
+#  filter(GS_country == "Global North") %>%
+  t_test(fee_student_pct ~ society_EDI_structure) %>%
+  add_significance()
+stat.test #NS
+
+dat %>% cohens_d(fee_student_pct ~ society_EDI_structure, var.equal = FALSE) # effect size
+```
+
+
+Presence of EDI structures vs postdoc fee discount percentage:   
+
+```{r}
+#boxplot with scatters for fee_postdoc_pct
+dat %>%
+  filter(!is.na(fee_postdoc_pct)) %>%
+  mutate(society_EDI_structure = fct_relevel(society_EDI_structure, "yes", "no")) %>% #reorder
+  ggplot(aes(x = society_EDI_structure, y = fee_postdoc_pct, fill = society_EDI_structure)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#fff7BC", "#888888")) +
+  geom_boxplot(alpha = 0.3) + 
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  #scale_y_continuous(labels = scales::percent()) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "", 
+       title = "Postdoc membership fee discount by society EDI structure")
+```
+   
+#### *Figure S33*.   
+*Postdoc discount percent with and without EDI structures*.    
+
+
+Test for postdoc fee discount percentage by EDI structure:    
+
+```{r}
+#not assuming equal variance using library(rstatix)
+stat.test <- dat %>% 
+#    filter(GS_country == "Global North") %>%
+  t_test(fee_postdoc_pct ~ society_EDI_structure) %>%
+  add_significance()
+stat.test #NS
+
+dat %>% cohens_d(fee_postdoc_pct ~ society_EDI_structure, var.equal = FALSE) # effect size
+```
+
+
+
+Create a single figure with student and postdoc discount levels by EDI structures:   
+
+```{r}
+## compare two basic membership discounts fee_student_pct and fee_postdoc_pct by EDI structure:
+
+#prepare data in long format
+dat_long2 <- dat %>%
+  select(society_EDI_structure, fee_student_pct, fee_postdoc_pct) %>%
+  pivot_longer(cols = c(fee_student_pct, fee_postdoc_pct), names_to = "fee_type", values_to = "fee_value") %>%
+  mutate(fee_type = ifelse(fee_type == "fee_student_pct", "student", "postdoc")) %>%
+  mutate(fee_value = fee_value/100) %>%  #as proportion
+  mutate(society_EDI_structure = fct_relevel(society_EDI_structure, "yes", "no")) #reorder
+
+levels(dat_long2$society_EDI_structure) <-  c("without EDI structure", "with EDI structure") #rename factor levels
+#str(dat_long2)
+
+#boxplot with scatters of jittered points in 2 facets by discount type 
+plot_EDI_discount_types_percent <-  dat_long2 %>% 
+  filter(!is.na(fee_value)) %>% #remove missing values
+  mutate(fee_type = fct_relevel(fee_type, "student", "postdoc")) %>% #reorder
+  ggplot(aes(x = society_EDI_structure, y = fee_value, fill = society_EDI_structure)) +  
+  geom_boxplot(alpha = 1) + 
+  geom_jitter(width = 0.1, alpha = 0.5) + 
+  scale_fill_manual(values=c("#4477AA", "#66CCEE")) +
+  facet_wrap(~fee_type) +
+  scale_y_continuous(labels = scales::label_percent(), limits = c(0,1)) +
+  #scale_x_discrete(labels = c("student", "postdoc")) + 
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  labs(x = "", 
+       y = "discount percentage", 
+       title = "Discount levels for students and postdocs by society EDI structure")
+
+
+##Presence of EDI structures vs number of discount types per society:    
+#change labels to se for plot facets
+dat$society_EDI_structure2 <- factor(dat$society_EDI_structure, levels = c("no", "yes"),
+                  labels = c("without EDI structure", "with EDI structure"))
+#plot
+plot_EDI_discount_types_count <- dat %>%
+  #mutate(text = fct_reorder(text, value)) %>%
+  ggplot(aes(x = discount_types_count, color = society_EDI_structure, fill = society_EDI_structure)) +
+    geom_histogram(alpha = 1, binwidth = 1) +
+    scale_fill_manual(values=c("#4477AA", "#66CCEE")) +
+    scale_color_manual(values=c("white", "white")) +
+    scale_x_continuous(breaks = seq(1,7, by = 1)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5)) +
+    theme(
+      legend.position = "none",
+      panel.spacing = unit(0.1, "lines"),
+      strip.text.x = element_text(size = 8)
+    ) +
+    labs(title = "Number of discount types per society by society EDI structure",
+       x = "count of discount types",
+       y = "count of societies") +
+    facet_wrap(~society_EDI_structure2)
+```
+   
+#### *Figure 4 - MAIN FIGURE*.      
+*Presence of EDI statement versus amounts and number of types of individual-level discounts*.        
+
+Figure 4 - combine 2 panels and save:   
+
+```{r}
+#assemble the panels using patchwork package
+figure4 <- plot_EDI_discount_types_percent / plot_EDI_discount_types_count + 
+  plot_layout(ncol = 1, nrow = 2) +
+  plot_annotation(tag_levels = "A")
+#ggsave(plot = figure4, here("plots", "Fig4AB_v2.png"), width = 18, height = 14, units = "cm", dpi = "retina", scale = 1.2)
+#ggsave(plot = figure4, here("plots", "Fig4AB_v2.pdf"), width = 18, height = 14, units = "cm", scale = 1.2)
+```
+
+
+
+EXTRA - contingency tables by National (by name) and International (not-National by name) societies:      
+
+```{r}
+table(dat$society_type) #needs cleaning - aggregate into National vs. International
+dat$society_NI <- substr(dat$society_type, 1, 1) #Extract first letter 
+table(dat$society_NI) #52 (31%) national by name
+
+table(dat$society_EDI_structure, dat$society_NI) #no diff
+fisher.test(table(dat$society_EDI_structure, dat$society_NI)) #NS
+
+table(dat$society_EDI_structure, dat$society_NI) #no diff
+fisher.test(table(dat$society_EDI_structure, dat$society_NI)) #NS
+
+table(dat$individual_waivers, dat$society_NI) #national societies as likely to offer individual waivers as international ones
+fisher.test(table(dat$individual_waivers, dat$society_NI)) #NS
+
+table(dat$countries_paymore, dat$society_NI) #national societies more likely to ask outsiders to pay more
+fisher.test(table(dat$countries_paymore, dat$society_NI)) #SIGNIFICANT
+
+table(dat$countries_payless, dat$society_NI) #national societies as likely to offer country-level fee discounts 
+fisher.test(table(dat$countries_payless, dat$society_NI)) #NS
+```
+
+
+Societies taking voluntary donations:  
+
+```{r}
+table(dat$voluntary_donations) #93 yes (55%)
+```
+
+
+
+## Membership benefits    
+What are the tangible benefits of individual society membership (e.g., awards, travel grants, conference fee discounts, journal subscriptions)?		
+
+Count types of discounts (benefits_types need to be splitted):    
+
+```{r}
+#dat$benefits_types #note some have "" (no info) - replace with "no info", but remember to remove from counting benefits later
+table(dat$benefits_types == "") #9 have "" (no info)
+#dat <- dat %>% mutate(benefits_types == "", "no info", benefits_types) #replace values
+
+#simmplify options by creating separate variables for each type of benefit
+dat2 <- dat %>% 
+  mutate(conference = str_detect(benefits_types, "Conference registration discount or waiver"),
+         funding = str_detect(benefits_types, "Funding"),
+         journal = str_detect(benefits_types, "Journal subscription discount or waiver"),
+         APC = str_detect(benefits_types, "Publication fees"),
+         networking = str_detect(benefits_types, "Networking or professional development"),
+         other = str_detect(benefits_types, "Other"),
+         none = str_detect(benefits_types, "[^/s]", negate = TRUE)) #empty ones
+
+#count of each type of benefit (as a sum)
+dat2 %>% 
+  select(conference, funding, journal, APC, networking, other, none) %>% 
+  summarise_all(sum) 
+
+#make a simple bar plot
+dat2 %>% 
+  select(conference, funding, journal, APC, networking, other, none) %>% 
+  gather(key = "benefit", value = "presence") %>% 
+  group_by(benefit) %>%
+  count(presence) %>%
+  filter(presence == TRUE) %>%
+  ggplot(aes(x = reorder(benefit, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  lims(y = c(0, 150)) +
+  coord_flip()
+```
+   
+#### *Figure S34*   
+*Frequencies of member benefits types*   
+
+
+Make upset plot to show frequencies of combinations of member benefit types:   
+
+```{r}
+#reshape into a column with list of values
+dat2 <- dat2 %>% 
+  mutate(benefits_types_list = list(c("conference", "funding", "journal", "APC", "networking", "other", "none"))) #create a list of values
+
+#select columns with society name and individual benefit presence
+benefits_wide <- dat2 %>% 
+  select(society, conference, funding, journal, APC, networking, other, none)
+
+#reshape into long tibble
+benefits_long <- benefits_wide %>%
+  as_tibble(rownames = "society") %>%
+  gather(Benefit, present, -society) %>%
+  select(-1) %>%
+  filter(present == TRUE) %>%
+  select(-3)
+
+#aggregate the society and create a list-column with the benefit information
+benefits_list <- benefits_long %>%
+  group_by(society) %>%
+  summarize(benefit_types_list = list(Benefit))
+#str(benefits_list)
+
+#make upset plot using library(ggupset)
+figure5 <- benefits_list %>%
+  ggplot(aes(x = benefit_types_list)) +
+    geom_bar(fill = "#21281D",width = 0.8) +
+    scale_y_continuous(limits = c(0, 30)) +
+    scale_x_upset(order_by = c("freq")) +
+    theme_combmatrix(combmatrix.panel.striped_background = FALSE,
+                    combmatrix.panel.point.color.fill = "#21281D",
+                    combmatrix.panel.line.size = 0,
+                    plot.title = element_text(family = "sans", size = 16, face = "plain", color = "#21281D"),
+                    axis.title.x = element_text(family="sans", size = 12, color = "#21281D", face="plain"), 
+                    axis.title.y = element_text(family="sans", size = 12, color = "#21281D", face = "plain", vjust = -2),
+                    ) + 
+   theme(plot.title = element_text(hjust = 0.5)) +
+    labs(title = "Combinations of main types of membership benefits", 
+         x = "", 
+         y = "count of societies")
+
+#ggsave(plot = figure5, here("plots", "Fig5.png"), width = 18, height = 8, units = "cm", dpi = "retina", scale = 1.5)
+#ggsave(plot = figure5, here("plots", "Fig5.pdf"), width = 18, height = 8, units = "cm", scale = 1.5)
+```
+   
+#### *Figure 5 - MAIN FIGURE*.   
+*Combinations of the main types of membership benefits*.     
+
+
+Count types of discounts (discount_types need to be split):    
+
+```{r}
+#replace "no fees" with "free option" to avoid confusion with "no fees" in dat$discount_types using gsub 
+dat$discount_types <- gsub("no fees", "free option", dat$discount_types)
+
+#count how many have NA = no discounts at all (flat fees)
+table(is.na(dat$discount_types)) #15
+
+#replace NA with "no discounts" to avoid confusion with "no fees"
+dat <- dat %>% mutate(discount_types = ifelse(is.na(discount_types), "no discounts", discount_types))
+
+#create new variable with discount types per society as a list
+dat <- dat %>% mutate(discount_types_list = str_split(dat$discount_types, pattern = ", "))
+
+#create new variable with counts of discount types per society
+dat <- dat %>% mutate(discount_types_count = lengths(discount_types_list))
+
+#simple table of number of discount types per society 
+table(dat$discount_types_count) #60 (35%) have only one type of discount
+
+
+#count each discount by type and show percentage of societies
+dat %>% 
+  unnest(discount_types_list) %>% 
+  count(discount_types_list) %>% 
+  filter(discount_types_list!= "") %>%
+  arrange(desc(n)) %>%
+  mutate(percentage = n/169 * 100) -> discount_types_table
+discount_types_table
+
+#make a simple bar plot
+discount_types_table %>% 
+  filter(discount_types_list!= "") %>%
+  ggplot(aes(x = reorder(discount_types_list, n), y = n)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9)) +
+  geom_text(aes(label = n), hjust = -0.15) +
+  lims(y = c(0, 150)) +
+  coord_flip()
+#dat$discount_types_list <- str_split(dat$discount_types, pattern = ", ") #same as above but modifies original data frame
+```
+
+How many benefit categories per society?    
+
+```{r}
+#select columns with society name and individual benefit presence, except "none", and 
+benefit_types_count <- dat2 %>% 
+  select(conference, funding, journal, APC, networking, other) %>%
+  rowSums(.)
+
+#add benefit_types_countcolumn to the data frame
+dat2 <- dat2 %>% mutate(benefit_types_count = benefit_types_count) 
+
+#table of benefits counts frequencies
+table(dat2$benefit_types_count)
+  
+#table with percentages
+round(table(dat2$benefit_types_count)/length(dat2$benefit_types_count)*100,1)
+
+
+#make a simple bar plot
+dat2 %>%
+  #mutate(text = fct_reorder(text, value)) %>%
+  ggplot(aes(x = benefit_types_count)) +
+    geom_histogram(alpha = 0.8, binwidth = 1) +
+    scale_x_continuous(breaks = seq(1,7, by = 1)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5)) +
+    theme(
+      legend.position = "none",
+      panel.spacing = unit(0.1, "lines"),
+      strip.text.x = element_text(size = 8)
+    ) +
+    labs(title = "Count of benefit types per society",
+       x = "count of benefits",
+       y = "count of societies") 
+```
+   
+#### *Figure S35*.       
+*Frequencies of numbers of member benefit categories per society*.    
+
+
+
+
+## Session Info
+
+```{r}
+sessionInfo()
+```
