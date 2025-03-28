@@ -40,10 +40,10 @@ Overall, when you work with us:
 ![Tentative timeline](SORTEE2024_project_timeline.png)
 
 ## 🚉 Current status    
-EOIs and draft protocol.      
+Data collected. Preliminary data analyses.      
 
 ## 🚀 Protocol   
-Final protocol will be publicly archived on OSF at [LINK to be added].    
+Final protocol will be publicly archived on [OSF](https://osf.io/8465y) with [DOI](https://doi.org/10.17605/OSF.IO/8465Y).    
 
 ## 🚚 Supporting information 
 Supporting information for this project will be publicly available at [LINK to be added].    
