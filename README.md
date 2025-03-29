@@ -16,7 +16,9 @@ This project aims to evaluate types and sizes of the DEI-related organisational 
 We expect that our findings will contribute to culture change fostering more equitable and open science.    
 
 ## 💎 Team  
-We have an diverse and open team of early- and mid-career researchers contributing to this project. We may still accept new contributors from traditionally underrepresented and marginalized groups in research (please inquire).
+We have an diverse and open team of early- and mid-career researchers contributing to this project. We warmly encourage contributors from traditionally underrepresented and marginalised groups in research.
+
+Currently, the team is finalised and we no longer accept new contributors. Please get in touch if you are interested in contributing to our future projects.
 
 ## 💛 Contributing  
 Overall, when you work with us:   
